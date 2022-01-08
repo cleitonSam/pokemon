@@ -1,0 +1,15 @@
+@import './assets/styles/reset.scss';
+@import './assets/styles/scroll-bar.scss';
+
+
+html {
+	font-family: 'Roboto', sans-serif;
+	background: #121210;
+}
+
+main {
+	max-width: 100rem;
+	box-sizing: border-box;
+	padding: 0 20px;
+	margin: 0 auto;
+}

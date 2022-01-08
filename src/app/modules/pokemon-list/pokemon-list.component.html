@@ -1,0 +1,30 @@
+<app-pokemon-header></app-pokemon-header>
+
+<app-pokemon-search (emmitSearch)="getSearch($event)"></app-pokemon-search>
+
+<section class="listagem">
+  <ng-template ngFor let-pokemon [ngForOf]="getAllPokemons">
+    <a class="pokemon" *ngIf="pokemon.status">
+      <div class="container">
+        <div class="card">
+          <img [src]="pokemon.status.sprites.other.dream_world.front_default" [alt]="pokemon.name" class="card__img">
+          <div class="card__data">
+            <h1 class="card__title">
+              <h2>
+                {{ pokemon.name | uppercase }}
+              </h2>
+            </h1>
+            <span class="card__preci">
+              <ul>
+                <li *ngFor="let value of pokemon.status.types">
+                  {{value.type.name}}
+                </li>
+              </ul>
+            </span>
+            <a [routerLink]="['details', pokemon.status.id]" class="card__button">Ver Mais</a>
+          </div>
+        </div>
+      </div>
+    </a>
+  </ng-template>
+</section>

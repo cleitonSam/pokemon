@@ -1,0 +1,21 @@
+/* Hover card effect */
+.card:hover{
+  .card__img{
+      transform: translate(-1.5rem, -9.5rem) rotate(-20deg);
+  }
+  .card__data{
+      transform: translateY(4.8rem);
+  }
+  .card__title{
+      transform: translateX(-2.3rem);
+      margin-bottom: 0;
+  }
+  .card__preci{
+      transform: translateX(-6.8rem);
+  }
+  .card__description,
+  .card__button{
+      transition-delay: .2s;
+      opacity: 1;
+  }
+}
